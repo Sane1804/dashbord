@@ -1,0 +1,42 @@
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+*,
+::after,
+::before {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: gray;
+    display: grid;
+    grid-template-columns: 0.5fr repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: "nav top top top"
+                         "nav main main main"
+                         "nav main main main"
+                         "nav main main main"
+                         "nav main main main";
+}
+
+#top {
+    background-color: yellow;
+    grid-area: top;
+}
+
+#nav {
+    background-color: blue;
+    grid-area: nav;
+}
+
+#main {
+    background-color: white;
+    grid-area: main;
+}
