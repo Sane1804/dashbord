@@ -1,8 +1,6 @@
 html {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
-    height: 100%;
+    min-height: 100%;
 }
 
 *,
@@ -30,13 +28,41 @@ body {
     background-color: yellow;
     grid-area: top;
 }
+/*You will find every element's selector that live inside #top from this line till you reach #nav*/
+
 
 #nav {
     background-color: blue;
     grid-area: nav;
+    position: relative;
+}
+/*You will find every element's selector that live inside #nav from this line till you reach #main*/
+
+.arrow-btn-container {
+    position: absolute;
+    right: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*This is the default class applied to arrow*/
+.hide-unhide-arrow-btn {
+    cursor: pointer;
+    max-width: 27px;
+    transition: 0.2s;
+}
+
+.hide-unhide-arrow-btn:hover {
+    transform: scale(1.2);
+}
+/*PRIGHT stands for "pointing right*/
+.hide-unhide-arrow-btn-pright {
+    transform: rotate(180deg);
 }
 
 #main {
     background-color: white;
     grid-area: main;
 }
+/*You will fine every element's selector that live inside #main below this line/
