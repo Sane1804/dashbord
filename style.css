@@ -46,6 +46,7 @@ body {
     align-items: center;
 }
 
+
 /*This is the default class applied to arrow*/
 .hide-unhide-arrow-btn {
     cursor: pointer;
@@ -53,11 +54,11 @@ body {
     transition: 0.2s;
 }
 
-.hide-unhide-arrow-btn:hover {
-    transform: scale(1.2);
-}
 /*PRIGHT stands for "pointing right*/
 .hide-unhide-arrow-btn-pright {
+    cursor: pointer;
+    max-width: 28px;
+    transition: 0.2s;
     transform: rotate(180deg);
 }
 
