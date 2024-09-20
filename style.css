@@ -7,6 +7,8 @@ html {
 ::after,
 ::before {
     box-sizing: inherit;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -22,8 +24,8 @@ body {
                          "nav main main main"
                          "nav main main main"
                          "nav main main main";
-    transition: 0.5s;
     overflow: hidden;
+    transition: 0.5s;
 }
 
 .body {
@@ -42,8 +44,47 @@ body {
     background-color: blue;
     grid-area: nav;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 3px 10px;
 }
 /*You will find every element's selector that live inside #nav from this line till you reach #main*/
+
+.container-img-text {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    border: 4px solid green;
+}
+
+.img-container {
+    margin: 0;
+    padding: 0;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashbord-logo {
+    border: 1px solid black;
+    max-width: 35px;
+}
+
+.navbar-text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid whitesmoke;
+    flex: 1;
+    transition: 1s;
+}
+
+.navbar-text-container-off {
+    display: none;
+    transition: 0.2s;
+}
 
 .arrow-btn-container {
     position: absolute;
