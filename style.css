@@ -43,7 +43,7 @@ body {
 
 
 #nav {
-    background-color: blue;
+    background-color: rgb(89, 89, 201);
     grid-area: nav;
     position: relative;
     display: flex;
@@ -78,6 +78,10 @@ body {
 .nav-items-container > .navbar-container-img-text:hover {
     background-color: rgb(165, 165, 224);
     transform: scale(1.05);
+}
+
+.nav-items-container > .navbar-container-img-text:active {
+    transform: scale(1);
 }
 
 .img-container {
