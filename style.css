@@ -17,7 +17,7 @@ body {
     height: 100vh;
     background-color: gray;
     display: grid;
-    grid-template-columns: 0.5fr repeat(3, 1fr);
+    grid-template-columns: 0.8fr repeat(3, 1fr);
     grid-template-rows: repeat(5, 1fr);
     grid-template-areas: "nav top top top"
                          "nav main main main"
@@ -34,10 +34,72 @@ body {
 }
 
 #top {
-    background-color: yellow;
+    display: flex;
+    flex-direction: column;
     grid-area: top;
+    background-color: whitesmoke;
+    box-shadow: 10px 10px 3px    black;
 }
 /*You will find every element's selector that live inside #top from this line till you reach #nav*/
+.top-container {
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid black;
+}
+
+.top-container > .flex-container {
+    gap: 10px;
+    padding: 5px 20px;
+}
+
+.top-container > .flex-container:nth-child(1) {
+    flex: 1;
+    max-width: 70%;
+}
+
+.top-container > .flex-container:nth-child(2) {
+    border: 1px solid green;
+    margin-left: auto;
+}
+
+
+
+.top-icon-container {
+    border: 1px solid black;
+}
+
+.top-icon {
+    max-width: 25px;
+    border-radius: 10px;
+    padding: 2px;
+    transition: 0.1s;
+    cursor: pointer;
+}
+
+.top-icon:hover {
+    background-color: aliceblue;
+    transform: scale(1.02);
+}
+
+.top-icon:active {
+    transform: scale(1);
+}
+
+.searchbar {
+    flex: 1;
+    height: 60%;
+    border-radius: 15px;
+    border: 1px solid gray;
+    padding: 4px 15px;
+    outline: none;
+}
+
+
+.profile-img {
+    max-width: 40px;
+    border-radius: 20px;
+}
+
 
 
 
@@ -49,30 +111,31 @@ body {
     display: flex;
     flex-direction: column;
     gap: 50px;
-    padding: 7px 10px;
+    padding: 20px 18px;
     color: white;
 }
 /*You will find every element's selector that live inside #nav from this line till you reach #main*/
 
-.container-img-text {
+.flex-container {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
 }
 
 .nav-items-container {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
     padding: 5px;
 }
 
 .nav-items-container > .navbar-container-img-text {
     cursor: pointer;
-    padding: 2px;
+    padding: 4px;
     transition: 0.2;
     border-radius: 5px;
+
 }
 
 .nav-items-container > .navbar-container-img-text:hover {
@@ -91,11 +154,11 @@ body {
 }
 
 .dashbord-logo {
-    max-width: 35px;
+    max-width: 40px;
 }
 
 .navbar-item-logo {
-    max-width: 20px;
+    max-width: 22px;
 }
 
 .navbar-text-container {
