@@ -1,6 +1,6 @@
 html {
     box-sizing: border-box;
-    min-height: 100%;
+    height: 100%;
 }
 
 *,
@@ -14,7 +14,7 @@ html {
 body {
     margin: 0;
     padding: 0;
-    height: 100vh;
+    min-height: 100vh;
     background-color: gray;
     display: grid;
     grid-template-columns: 0.8fr repeat(3, 1fr);
@@ -24,7 +24,7 @@ body {
                          "nav main main main"
                          "nav main main main"
                          "nav main main main";
-    overflow: hidden;
+    overflow-x: hidden;
     transition: 0.5s;
 }
 
@@ -38,35 +38,33 @@ body {
     flex-direction: column;
     grid-area: top;
     background-color: whitesmoke;
-    box-shadow: 10px 10px 3px    black;
+    min-width: 550px;
 }
 /*You will find every element's selector that live inside #top from this line till you reach #nav*/
 .top-container {
     display: flex;
     justify-content: space-around;
-    border: 1px solid black;
+    padding: 0px 15px;
 }
 
 .top-container > .flex-container {
-    gap: 10px;
+    gap: 5px;
     padding: 5px 20px;
 }
 
 .top-container > .flex-container:nth-child(1) {
     flex: 1;
+    
     max-width: 70%;
+    min-width: 200px;
 }
 
 .top-container > .flex-container:nth-child(2) {
-    border: 1px solid green;
+    padding: 0;
     margin-left: auto;
 }
 
 
-
-.top-icon-container {
-    border: 1px solid black;
-}
 
 .top-icon {
     max-width: 25px;
