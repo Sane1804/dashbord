@@ -39,12 +39,13 @@ body {
     grid-area: top;
     background-color: whitesmoke;
     min-width: 550px;
+    padding: 5px 15px;
 }
 /*You will find every element's selector that live inside #top from this line till you reach #nav*/
 .top-container {
+    flex: 1;
     display: flex;
     justify-content: space-around;
-    padding: 0px 15px;
 }
 
 .top-container > .flex-container {
@@ -54,7 +55,6 @@ body {
 
 .top-container > .flex-container:nth-child(1) {
     flex: 1;
-    
     max-width: 70%;
     min-width: 200px;
 }
@@ -96,6 +96,22 @@ body {
 .profile-img {
     max-width: 40px;
     border-radius: 20px;
+}
+
+.big-profile-img {
+    max-width: 60px;
+    border-radius: 30px;
+}
+
+.top-button {
+    padding: 10px;
+    min-width: 80px;
+    border-radius: 10px;
+    border: 1px solid rgb(100, 100, 197);
+    box-shadow: 0 0 5px rgb(24, 25, 85);
+    background-color: rgb(174, 174, 233);
+    font-weight: 900;
+    color:white;
 }
 
 
@@ -172,8 +188,8 @@ body {
 
 .arrow-btn-container {
     position: absolute;
-    right: 3px;
-    bottom: 2px;
+    right: 1px;
+    top: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
