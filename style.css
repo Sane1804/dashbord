@@ -1,6 +1,7 @@
 html {
     box-sizing: border-box;
     height: 100%;
+    font-family: "Lato";
 }
 
 *,
@@ -18,7 +19,7 @@ body {
     background-color: gray;
     display: grid;
     grid-template-columns: 0.8fr repeat(3, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows:  0.75fr repeat(4, 1fr);
     grid-template-areas: "nav top top top"
                          "nav main main main"
                          "nav main main main"
@@ -40,6 +41,8 @@ body {
     background-color: whitesmoke;
     min-width: 550px;
     padding: 5px 15px;
+    box-shadow: 0px 5px 10px rgb(219, 165, 165);
+    z-index: 1;
 }
 /*You will find every element's selector that live inside #top from this line till you reach #nav*/
 .top-container {
@@ -85,7 +88,7 @@ body {
 
 .searchbar {
     flex: 1;
-    height: 60%;
+    height: 40px;
     border-radius: 15px;
     border: 1px solid gray;
     padding: 4px 15px;
@@ -127,6 +130,7 @@ body {
     gap: 50px;
     padding: 20px 18px;
     color: white;
+    z-index: 2;
 }
 /*You will find every element's selector that live inside #nav from this line till you reach #main*/
 
@@ -211,7 +215,112 @@ body {
 }
 
 #main {
-    background-color: white;
+    background-color: rgb(235, 207, 207);
     grid-area: main;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "project project project announcement"
+                         "project project project trending";
 }
-/*You will fine every element's selector that live inside #main below this line/
+
+/*You will fine every element's selector that live inside #main below this line*/
+
+
+.project-container {
+    grid-area: project;
+}
+
+.announcement-container {
+    grid-area: announcement;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.trending-container {
+    grid-area: trending;
+}
+
+.main-container {
+    padding: 25px 15px;
+    border: 1px solid black;
+}
+
+.main-header {
+    font-weight: 600;
+    font-size: large;
+}
+
+.card-container {
+    display: grid;
+    gap: 20px;
+    padding: 8px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0px 0px 10px gray;
+    padding: 10px;
+    border-radius: 5px;
+    border-left: 6px solid orange;
+    background-color: rgb(252, 251, 251);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: scale(1.01);
+    box-shadow: 0px 0px 20px gray;
+
+}
+
+
+.project-card > h6 {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.project-card > p {
+    font-weight: 300;
+    color: rgb(56, 54, 54);
+}
+
+.card-icons-container {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+}
+
+.card-icon {
+    max-width: 20px;
+}
+
+
+.announcement-card {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 5px;
+    padding: 15px 20px;
+    background-color: rgb(252, 251, 251);
+    box-shadow: 0px 0px 10px gray;
+}
+
+.announcement:nth-child(1),
+.announcement:nth-child(2) {
+    border-bottom: 1px solid rgb(224, 215, 215);
+    padding-bottom: 15px;
+}
+
+.announcement > h6 {
+    font-size: 14px;
+}
+
+.announcement > p {
+    font-weight: 300;
+    font-size: 14px;
+}
