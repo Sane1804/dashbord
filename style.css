@@ -1,3 +1,5 @@
+
+
 html {
     box-sizing: border-box;
     height: 100%;
@@ -18,14 +20,13 @@ body {
     min-height: 100vh;
     background-color: gray;
     display: grid;
-    grid-template-columns: 0.8fr repeat(3, 1fr);
+    grid-template-columns: 0.75fr repeat(3, 1fr);
     grid-template-rows:  0.75fr repeat(4, 1fr);
     grid-template-areas: "nav top top top"
                          "nav main main main"
                          "nav main main main"
                          "nav main main main"
                          "nav main main main";
-    overflow-x: hidden;
     transition: 0.5s;
 }
 
@@ -222,6 +223,8 @@ body {
     grid-template-rows: repeat(2, 1fr);
     grid-template-areas: "project project project announcement"
                          "project project project trending";
+                         
+    padding: 10px 17px;
 }
 
 /*You will fine every element's selector that live inside #main below this line*/
@@ -233,9 +236,6 @@ body {
 
 .announcement-container {
     grid-area: announcement;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
 }
 
 .trending-container {
@@ -244,7 +244,9 @@ body {
 
 .main-container {
     padding: 25px 15px;
-    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .main-header {
@@ -261,6 +263,7 @@ body {
 
 .project-card {
     display: flex;
+    min-height: 200px;
     flex-direction: column;
     gap: 10px;
     box-shadow: 0px 0px 10px gray;
@@ -272,6 +275,7 @@ body {
     transition: 0.3s;
 }
 
+
 .project-card:hover {
     transform: scale(1.01);
     box-shadow: 0px 0px 20px gray;
@@ -280,6 +284,7 @@ body {
 
 
 .project-card > h6 {
+    margin-top: 5px;
     font-weight: 600;
     font-size: 15px;
 }
@@ -292,7 +297,8 @@ body {
 .card-icons-container {
     display: flex;
     justify-content: flex-end;
-    gap: 5px;
+    gap: 10px;
+    margin-top: auto;
 }
 
 .card-icon {
@@ -300,14 +306,14 @@ body {
 }
 
 
-.announcement-card {
+.aside-card {
     display: flex;
     flex-direction: column;
     gap: 20px;
     border-radius: 5px;
     padding: 15px 20px;
     background-color: rgb(252, 251, 251);
-    box-shadow: 0px 0px 10px gray;
+    box-shadow: 0px 0px 10px grey;
 }
 
 .announcement:nth-child(1),
@@ -323,4 +329,20 @@ body {
 .announcement > p {
     font-weight: 300;
     font-size: 14px;
+}
+
+.trending-card {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 10px grey;
+    padding: 15px 20px;
+    gap:10px;
+    background-color: rgb(252, 251, 251);
+    border-radius: 5px;
+
+}
+
+.trending-text-container > p {
+    font-size: smaller;
+    color: rgb(43, 41, 41);
 }
